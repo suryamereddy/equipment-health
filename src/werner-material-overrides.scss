@@ -1,0 +1,105 @@
+
+.pad-24{padding:24px;}
+.pad-12{padding:12px;}
+
+
+/* ------------- BUTTON ------------- */
+
+.mat-flat-button .mat-icon{font-size: 20px;}
+
+
+/* ------------- CARD ------------- */
+
+.mat-card-content {
+  padding: 12px;
+  .mat-divider-horizontal{position: relative;}
+}
+
+
+  .basic-card {
+    padding: 0 !important;
+    margin: 0;
+    .mat-body-1{opacity:.8;}
+    .mat-card-header-text {
+      margin: 0 0 0 0;
+    }
+    
+    mat-card-header {
+      font-weight: 500 !important;
+      padding: 12px;
+      background-color: $werner-theme-gray3;
+      border-bottom: 1px solid $werner-theme-gray2;
+      font-size: 15px !important; 
+      margin-bottom: 0;
+      &.card-header--background-blue{
+        background: $werner-theme-dark-blue;
+        color: $werner-theme-white;
+        padding:24px 12px;
+      }
+    }
+  }
+
+
+
+
+
+
+/* ------------- CHECKBOX ------------- */
+
+.mat-checkbox{margin:0 10px;}
+
+
+
+/* ------------- DIALOG ------------- */
+
+.dialog--upload{
+  background: $werner-theme-gray3;
+  padding: 60px;
+  border-radius: 4px;
+  border:2px dashed $werner-theme-gray2;
+  text-align: center;
+  color:$werner-theme-gray1;
+  margin-bottom: 12px;
+  img{
+    width: 40px;
+  }
+}
+
+.mat-dialog-content{overflow:inherit !important;}
+.mat-dialog-actions{margin-bottom: 0 !important;}
+
+/* ------------- EXPANSION PANEL ------------- */
+
+.mat-expansion-panel-header-title{
+    font-size: 15px;
+    font-weight: 500;
+}
+.mat-expansion-panel-header.mat-expanded{
+    max-height: 45px;
+    background-color: $werner-theme-gray3;
+    border-radius:4px 4px 0 0;
+}
+
+
+.mat-expansion-panel-body{padding: 12px !important;}
+.mat-expansion-panel-header{
+  padding:0 12px !important;
+  background-color: $werner-theme-gray3 !important;
+  border-bottom: 1px solid $werner-theme-gray2;
+}
+
+mat-expansion-panel.mat-expansion-panel, mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing{margin-bottom: 0;}
+
+
+/* ------------- STEPPER ------------- */
+
+.stepper__content{padding-top: 20px;}
+
+:host::ng-deep{
+    .mat-horizontal-stepper-header-container{background: $werner-theme-dark-blue;}
+    .mat-horizontal-stepper-header::before, .mat-horizontal-stepper-header::after, .mat-stepper-horizontal-line{border-top-color:rgba(255, 255, 255, 0.4);}
+    .mat-step-text-label{color: $werner-theme-white;}
+}
+
+
+

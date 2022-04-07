@@ -1,0 +1,81 @@
+<mat-accordion>
+    <mat-expansion-panel
+      class="basic-card outline mat-elevation-z0"
+      [expanded]="true"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Equipment Information </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div fxLayout="column" fxLayoutGap="12px">
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Equipment Type</span>
+          <span fxFlex class="mat-body-2"
+            >{{ equipment.equipmentType }}
+          </span>
+        </div>
+        <div fxLayout="row" *ngIf="equipment.unitNumber">
+          <span fxFlex class="info-title mat-body-1">Unit Number</span>
+          <span fxFlex class="mat-body-2">{{
+            equipment.unitNumber
+          }}</span>
+        </div>
+        <div fxLayout="row" *ngIf="equipment.owner">
+          <span fxFlex class="info-title mat-body-1">Owner</span>
+          <span fxFlex class="mat-body-2">{{ equipment.owner }}</span>
+        </div>
+
+        <div fxLayout="row" *ngIf="equipment.manufacturer">
+          <span fxFlex class="info-title mat-body-1">Manufacturer</span>
+          <span fxFlex class="mat-body-2">{{
+            equipment.manufacturer
+          }}</span>
+        </div>
+
+        <div fxLayout="row" *ngIf="equipment.year">
+          <span fxFlex class="info-title mat-body-1">Year</span>
+          <span fxFlex class="mat-body-2">{{ equipment.year }}</span>
+        </div>
+
+        <div fxLayout="row" *ngIf="equipment.model">
+          <span fxFlex class="info-title mat-body-1"> Model </span>
+          <span fxFlex class="mat-body-2">{{ equipment.model }}</span>
+        </div>
+
+        <div fxLayout="row" *ngIf="equipment.engineType">
+          <span fxFlex class="info-title mat-body-1">Engine Type </span>
+          <span fxFlex class="mat-body-2">{{
+            equipment.engineType
+          }}</span>
+        </div>
+
+        <div fxLayout="row" *ngIf="equipment.inServiceDate">
+          <span fxFlex class="info-title mat-body-1"
+            >In-Service Date</span
+          >
+          <span fxFlex class="mat-body-2">{{
+            dateUtility.formatDateLocalTime(
+              equipment.inServiceDate,
+              "MM/DD/YYYY"
+            )
+          }}</span>
+        </div>
+
+        <div fxLayout="row" *ngIf="equipment.vin">
+          <span fxFlex class="info-title mat-body-1">VIN</span>
+          <span fxFlex class="mat-body-2">{{ equipment.vin }}</span>
+        </div>
+
+        <div fxLayout="row" *ngIf="equipment.esn">
+          <span fxFlex class="info-title mat-body-1">ESN</span>
+          <span fxFlex class="mat-body-2">{{ equipment.esn }}</span>
+        </div>
+
+        <div fxLayout="row" *ngIf="equipment.odometer">
+          <span fxFlex class="info-title mat-body-1">Odometer</span>
+          <span fxFlex class="mat-body-2">{{
+            equipment.odometer | number
+          }}</span>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
