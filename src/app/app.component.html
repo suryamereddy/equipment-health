@@ -1,7 +1,13 @@
-<div class="pad-24">
-  <div fxLayout="row" fxLayoutAlign="space-around stretch">
+<div class="pad-24 full-height">
+  <div
+    fxLayoutGap="12px"
+    fxLayoutAlign="start center"
+    fxLayoutAlign.gt-md="space-between stretch"
+    fxLayout.gt-md="row"
+    fxLayout="column"
+  >
     <span class="header-text">Equipment Health Dashboad </span>
-    <mat-form-field class="example-form-field" appearance="fill">
+    <mat-form-field appearance="fill">
       <mat-label>Equipment ID</mat-label>
       <input
         matInput
@@ -10,6 +16,7 @@
         placeholder="Enter a Equipment Id"
       />
       <button
+        fxLayoutAlign="left"
         *ngIf="equipmentId"
         matSuffix
         mat-icon-button
@@ -38,7 +45,10 @@
         <app-equipment-information
           [equipment]="equipment"
         ></app-equipment-information>
-        <app-driver-information></app-driver-information>
+        <app-driver-information
+          [equipment]="equipment"
+        ></app-driver-information>
+        <app-tire-health [equipment]="equipment"></app-tire-health>
       </div>
 
       <div
@@ -48,7 +58,6 @@
         fxLayoutAlign="space-around stretch"
       >
         <app-equipment-history [equipment]="equipment"></app-equipment-history>
-        <img /><img />
         <app-map class="full-height" [equipment]="equipment"></app-map>
       </div>
     </div>

@@ -30,6 +30,24 @@ export class AppComponent {
     faultCodeSeverity: 'high',
     faultCodeText: 'Update Navigo',
     faultCodeCount: 2,
+    driver: {
+      name: 'John Doe',
+      id: 8754657,
+      phone: 4025847845,
+      status: 'DRIVING',
+    },
+    tirehealth: {
+      rightSteer: 40,
+      leftSteer: 40,
+      rightFrontOuter: 40,
+      rightFrontInner: 40,
+      rightRearOuter: 40,
+      rightRearInner: 40,
+      leftFrontOuter: 40,
+      leftFrontInner: 40,
+      leftRearOuter: 40,
+      leftRearInner: 40,
+    },
   };
 
   constructor(public dateUtility: DateUtility) {}

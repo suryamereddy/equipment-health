@@ -1,50 +1,44 @@
 <mat-accordion>
-    <mat-expansion-panel
-      class="basic-card outline mat-elevation-z0"
-      [expanded]="true"
-    >
-      <mat-expansion-panel-header>
-        <mat-panel-title> Driver Information </mat-panel-title>
-      </mat-expansion-panel-header>
-      <div fxLayout="column" fxLayoutGap="12px" *ngIf="driverInfo">
-        <div
-          fxLayout="row"
-          fxLayoutGap="25px"
-          class="driver-contact mat-card-overflow"
-        >
-          <span fxLayoutAlign=" start" *ngIf="driverInfo.name">
-            <div
-              fxLayout="column"
-              fxLayoutGap="12px"
-              fxLayoutAlign=" center"
-            >
-              <ngx-avatar
-                size="75"
-                name="{{ driverInfo.name }}"
-                initialsSize="2"
-              ></ngx-avatar>
-              <mat-chip-list class="driving-status" id="status">
-                <mat-chip
-                  disableRipple="true"
-                  chipListSelectable="false"
-                  >{{ driverInfo?.status | uppercase }}</mat-chip
-                >
-              </mat-chip-list>
-            </div>
-          </span>
-          <span fxFlex="50">
-            <span class="mat-body-2" *ngIf="driverInfo.name" id="name"
-              >{{ driverInfo.name | titlecase }}<br
-            /></span>
-            <span class="mat-body-2" *ngIf="driverInfo.id" id="id"
-              >{{ driverInfo.id }}<br
-            /></span>
+  <mat-expansion-panel
+    class="basic-card outline mat-elevation-z0"
+    [expanded]="true"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title> Driver Status </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div fxLayout="column" fxLayoutGap="12px">
+      <div
+        fxLayout="row"
+        fxLayoutGap="25px"
+        class="driver-contact mat-card-overflow"
+      >
+        <span fxLayoutAlign=" start">
+          <div fxLayout="column" fxLayoutGap="12px" fxLayoutAlign=" center">
+            <ngx-avatar
+              size="75"
+              name="{{ equipment.driver.name }}"
+              initialsSize="2"
+            ></ngx-avatar>
+            <mat-chip-list class="driving-status" id="status">
+              <mat-chip disableRipple="true" chipListSelectable="false">{{
+                equipment.driver?.status | uppercase
+              }}</mat-chip>
+            </mat-chip-list>
+          </div>
+        </span>
+        <span fxFlex="50">
+          <span class="mat-body-2" id="name"
+            >{{ equipment.driver.name | titlecase }}<br
+          /></span>
+          <span class="mat-body-2" id="id"
+            >{{ equipment.driver.id }}<br
+          /></span>
 
-            <span class="mat-body-2" *ngIf="driverInfo.phone" id="phone">
-              {{ driverInfo.phone }}<br
-            /></span>
-          </span>
-        </div>
+          <span class="mat-body-2" id="phone">
+            {{ equipment.driver.phone }}<br
+          /></span>
+        </span>
       </div>
-    </mat-expansion-panel>
-  </mat-accordion>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

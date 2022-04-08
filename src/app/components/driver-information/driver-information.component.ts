@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Driver } from 'src/app/models/driver.model';
+import { Component, Input } from '@angular/core';
+import { Equipment } from 'src/app/models/equipment.model';
 
 @Component({
   selector: 'app-driver-information',
@@ -7,10 +7,5 @@ import { Driver } from 'src/app/models/driver.model';
   styleUrls: ['./driver-information.component.scss'],
 })
 export class DriverInformationComponent {
-  driverInfo: Driver = {
-    name: 'John Doe',
-    id: 8754657,
-    phone: 4025847845,
-    status: 'DRIVING',
-  };
+  @Input() equipment!: Equipment;
 }

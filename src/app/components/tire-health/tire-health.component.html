@@ -1,0 +1,72 @@
+<mat-accordion>
+  <mat-expansion-panel
+    class="basic-card outline mat-elevation-z0"
+    [expanded]="true"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title> Tire Health </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div fxLayout="column" fxLayoutGap="12px">
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Right Steer</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.rightSteer }} PSI
+        </span>
+      </div>
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Left Steer</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.leftSteer }} PSI</span
+        >
+      </div>
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Right Front Outer</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.rightFrontOuter }} PSI</span
+        >
+      </div>
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Right Front Inner</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.rightFrontInner }} PSI</span
+        >
+      </div>
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Right Rear Outer</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.rightRearOuter }} PSI</span
+        >
+      </div>
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Right Rear Inner</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.rightRearInner }} PSI</span
+        >
+      </div>
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Left Front Outer</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.leftFrontOuter }} PSI</span
+        >
+      </div>
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Left Front Inner</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.leftFrontInner }} PSI</span
+        >
+      </div>
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Left Rear Outer</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.leftRearOuter }} PSI</span
+        >
+      </div>
+      <div fxLayout="row">
+        <span fxFlex class="info-title mat-body-1">Left Rear Inner</span>
+        <span fxFlex class="mat-body-2"
+          >{{ equipment.tirehealth.leftRearInner }} PSI</span
+        >
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

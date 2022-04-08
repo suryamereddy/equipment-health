@@ -47,6 +47,7 @@ import { DriverInformationComponent } from './components/driver-information/driv
 import { EquipmentHistoryComponent } from './components/equipment-history/equipment-history.component';
 import { EquipmentInformationComponent } from './components/equipment-information/equipment-information.component';
 import { MapComponent } from './components/map/map.component';
+import { TireHealthComponent } from './components/tire-health/tire-health.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MapComponent } from './components/map/map.component';
     EquipmentInformationComponent,
     DriverInformationComponent,
     MapComponent,
+    TireHealthComponent,
   ],
   imports: [
     FormsModule,

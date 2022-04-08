@@ -1,3 +1,6 @@
+import { Driver } from './driver.model';
+import { TireHealth } from './tire-health.model';
+
 export interface Equipment {
   equipmentType: string;
   unitNumber: number;
@@ -16,4 +19,6 @@ export interface Equipment {
   faultCodeSeverity: string;
   faultCodeText: string;
   faultCodeCount: number;
+  driver: Driver;
+  tirehealth: TireHealth
 }
