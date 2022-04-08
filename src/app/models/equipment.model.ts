@@ -3,7 +3,7 @@ import { TireHealth } from './tire-health.model';
 
 export interface Equipment {
   equipmentType: string;
-  unitNumber: number;
+  unitNumber: string;
   owner: string;
   manufacturer: string;
   year: number;

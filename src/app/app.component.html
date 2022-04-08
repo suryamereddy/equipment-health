@@ -11,7 +11,8 @@
       <mat-label>Equipment ID</mat-label>
       <input
         matInput
-        type="text"
+        type="number"
+        (keydown.enter)="getEquipmentData()"
         [(ngModel)]="equipmentId"
         placeholder="Enter a Equipment Id"
       />
@@ -21,9 +22,9 @@
         matSuffix
         mat-icon-button
         aria-label="Clear"
-        (click)="equipmentId = ''"
+        (click)="getEquipmentData()"
       >
-        <mat-icon>close</mat-icon>
+        <mat-icon>search</mat-icon>
       </button>
     </mat-form-field>
   </div>

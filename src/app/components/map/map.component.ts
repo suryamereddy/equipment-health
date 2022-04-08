@@ -8,18 +8,72 @@ import { Equipment } from 'src/app/models/equipment.model';
   styleUrls: ['./map.component.scss'],
 })
 export class MapComponent implements OnInit {
-  @Input() equipment!: Equipment;
-  constructor() {}
+  @Input() set equipment(equipment: Equipment) {
+    this.equipmentData = equipment;
+    this.addTruckIcon(equipment);
+  }
+
+  myMap!: TrimbleMaps.Map;
+  equipmentData!: Equipment;
+
+  constructor() {
+    TrimbleMaps.APIKey = 'B6ED1A19F456AE45BD0A76E3813CC249';
+  }
 
   ngOnInit(): void {
-    TrimbleMaps.APIKey = 'B6ED1A19F456AE45BD0A76E3813CC249';
-
-    var myMap = new TrimbleMaps.Map({
+    this.myMap = new TrimbleMaps.Map({
       container: 'map',
-      center: [-91.38, 39],
-      zoom: 3,
+      center: new TrimbleMaps.LngLat(
+        this.equipmentData.long,
+        this.equipmentData.lat
+      ),
+      zoom: 8,
     });
 
-    myMap.on('load', () => {});
+    this.myMap.on('load', () => {
+      this.addTruckIcon(this.equipmentData);
+    });
+  }
+
+  private addTruckIcon(equipment: Equipment): void {
+    if (this.myMap) {
+      if (this.myMap.getLayer('truckLayer'))
+        this.myMap.removeLayer('truckLayer');
+      if (this.myMap.getSource('truckLocation'))
+        this.myMap.removeSource('truckLocation');
+
+      this.myMap.addSource('truckLocation', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: [
+            {
+              type: 'Feature',
+              properties: {
+                name: equipment.driver.name,
+              },
+              geometry: {
+                type: 'Point',
+                coordinates: [equipment.long, equipment.lat],
+              },
+            },
+          ],
+        },
+      });
+
+      this.myMap.addLayer({
+        id: 'truckLayer',
+        type: 'symbol',
+        source: 'truckLocation',
+        layout: {
+          'icon-image': 'poi_truck',
+          'icon-size': 1.5,
+        },
+      });
+
+      this.myMap.setCenter(
+        new TrimbleMaps.LngLat(this.equipmentData.long, this.equipmentData.lat)
+      );
+    }
   }
 }
