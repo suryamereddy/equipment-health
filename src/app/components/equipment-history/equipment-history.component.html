@@ -26,16 +26,16 @@
           <div class="pad-24">
             <div fxLayout="column">
               <div fxLayout="row" fxLayoutGap="12px">
-                <div class="item-count">{{ equipment.faultCodeCount }}</div>
+                <div class="item-count">{{ equipment.faultCodes.length }}</div>
                 <div fxLayout="column">
                   <div class="fault-text">ACTIVE FAULT CODES</div>
                   <mat-progress-bar
-                    class="{{ equipment.faultCodeSeverity}}"
+                    class="{{ equipment.faultCodeSeverity }}"
                     mode="determinate"
                     value="75"
                   ></mat-progress-bar>
                   <div class="severity-text">
-                    Severity: {{ equipment.faultCodeText }}
+                    Severity: {{ equipment.faultCodeSeverity }}
                   </div>
                 </div>
               </div>
@@ -52,33 +52,30 @@
             </div>
           </div>
         </mat-tab>
-        <!-- <mat-tab label="Details" *ngIf="faultCodeCount > 0">
+        <mat-tab label="Details">
           <div class="layout-gap-left-20 layout-gap-top-20" fxLayoutGap="12px">
             <div
               fxLayout="row"
               fxLayoutGap="12px"
-              *ngFor="let faultCode of equipmentHistoryData?.faultCodes"
+              *ngFor="let faultCode of equipment?.faultCodes"
             >
               <mat-icon
-                class="{{ getFaultCodeIconColor(faultCode?.severity) }}"
-                matTooltip="{{ FaultCodeSeverityMapping[faultCode?.severity] }}"
+                class="{{ faultCode.severity }}"
+                matTooltip="{{ faultCode.severity }}"
                 matTooltipPosition="above"
                 aria-label="Button that displays a tooltip when focused or hovered over"
                 >report</mat-icon
               >
               <div fxLayout="column">
-                <div class="mat-body-2">
-                  Code: {{ faultCode?.faultCodeId }} |
-                  {{ FeedTypeMapping[faultCode?.feedType] }}
-                </div>
+                <div class="mat-body-2">Code: {{ faultCode?.id }}</div>
                 <div class="mat-body-1">
-                  {{ dateUtility.formatDateLocalTime(faultCode?.createdDate) }}
+                  {{ dateUtility.formatDateLocalTime(faultCode.date) }}
                 </div>
-                <div class="mat-body-1">{{ faultCode?.component }}</div>
+                <div class="mat-body-1">{{ faultCode?.text }}</div>
               </div>
             </div>
           </div>
-        </mat-tab> -->
+        </mat-tab>
       </mat-tab-group>
     </div>
   </mat-card-content>

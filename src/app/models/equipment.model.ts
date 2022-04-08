@@ -1,4 +1,5 @@
 import { Driver } from './driver.model';
+import { FaultCode } from './fault-code.model';
 import { TireHealth } from './tire-health.model';
 
 export interface Equipment {
@@ -17,8 +18,7 @@ export interface Equipment {
   long: number;
   scheduledMaintenances: string[];
   faultCodeSeverity: string;
-  faultCodeText: string;
-  faultCodeCount: number;
+  faultCodes: FaultCode[];
   driver: Driver;
-  tirehealth: TireHealth
+  tirehealth: TireHealth;
 }

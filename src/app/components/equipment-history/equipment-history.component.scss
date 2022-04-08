@@ -70,46 +70,39 @@
     margin-left: 20px;
   }
   
-  ::ng-deep .success .mat-progress-bar-fill::after {
+  ::ng-deep .Low .mat-progress-bar-fill::after {
     background-color: #388e3c;
   }
   
-  ::ng-deep .alert .mat-progress-bar-fill::after {
+  ::ng-deep .Medium .mat-progress-bar-fill::after {
     background-color: #f6a800;
   }
   
-  ::ng-deep .warn .mat-progress-bar-fill::after {
-    background-color: #ef6c00;
-  }
-  
-  ::ng-deep .caution .mat-progress-bar-fill::after {
+  ::ng-deep .High .mat-progress-bar-fill::after {
     background-color: #c62828;
   }
   
-  ::ng-deep .success .mat-progress-bar-buffer {
+  ::ng-deep .Low .mat-progress-bar-buffer {
     background-color: #def8df;
   }
   
-  ::ng-deep .alert .mat-progress-bar-buffer {
+  ::ng-deep .Medium .mat-progress-bar-buffer {
     background-color: #ffefcc;
   }
   
-  ::ng-deep .warn .mat-progress-bar-buffer {
-    background: #fae4d2;
-  }
-  ::ng-deep .caution .mat-progress-bar-buffer {
+  ::ng-deep .High .mat-progress-bar-buffer {
     background: #fadbd8;
   }
   
-  .mil {
+  .Low {
+    color: #388e3c;
+  }
+  
+  .Medium {
     color: #f6a800;
   }
   
-  .amber {
-    color: #ef6c00;
-  }
-  
-  .red {
+  .High {
     color: #c62828;
   }
   

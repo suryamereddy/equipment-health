@@ -1,16 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Equipment } from 'src/app/models/equipment.model';
+import { DateUtility } from 'src/app/utilities/date.utility';
 
 @Component({
   selector: 'app-equipment-history',
   templateUrl: './equipment-history.component.html',
   styleUrls: ['./equipment-history.component.scss'],
 })
-export class EquipmentHistoryComponent implements OnInit {
+export class EquipmentHistoryComponent {
   @Input()
   equipment!: Equipment;
 
-  constructor() {}
+  constructor(public dateUtility: DateUtility) {}
 
-  ngOnInit(): void {}
+  getProgress(): number {
+    return (this.equipment.faultCodes.length * 50);
+  }
 }

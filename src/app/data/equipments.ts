@@ -24,9 +24,15 @@ export const Equipments = [
       'REPLACE FUEL FILTER',
       'TREAD DEPTH READING (VEH)',
     ],
-    faultCodeSeverity: 'medium',
-    faultCodeText: 'Transmission 175119',
-    faultCodeCount: 1,
+    faultCodeSeverity: 'Medium',
+    faultCodes: [
+      {
+        severity: 'Medium',
+        text: 'Transmission 175119',
+        id: 'F-72733-220316-11',
+        date: '23/04/2018 13:45',
+      },
+    ],
     driver: {
       name: 'DANIEL WHITFIELD',
       id: 1014856,
@@ -68,9 +74,27 @@ export const Equipments = [
       'ROUTINE ECM HOOKUP',
       'TREAD DEPTH READING (VEH)',
     ],
-    faultCodeSeverity: 'high',
-    faultCodeText: 'Engine 1524616',
-    faultCodeCount: 3,
+    faultCodeSeverity: 'High',
+    faultCodes: [
+      {
+        severity: 'Medium',
+        text: '35642',
+        id: 'F-74159-220320-5',
+        date: '20/03/2022 15:21',
+      },
+      {
+        severity: 'Medium',
+        text: 'Engine 143344',
+        id: 'F-74159-220321-206',
+        date: '21/03/2022 10:24',
+      },
+      {
+        severity: 'High',
+        text: 'Engine 1524616',
+        id: 'F-74159-220323-3',
+        date: '23/03/2022 00:21',
+      },
+    ],
     driver: {
       name: 'JACK DANIEL',
       id: 596092,
@@ -111,9 +135,27 @@ export const Equipments = [
       'NAVIGO 17.1 UPDATE',
       'ROUTINE ECM HOOKUP',
     ],
-    faultCodeSeverity: 'medium',
-    faultCodeText: 'Cab Controller - Primary8294',
-    faultCodeCount: 3,
+    faultCodeSeverity: 'Medium',
+    faultCodes: [
+      {
+        severity: 'Medium',
+        text: 'Cab Controller - Primary8294',
+        id: 'F-74937-220313-1',
+        date: '13/03/2022 18:04',
+      },
+      {
+        severity: 'Low',
+        text: 'Engine 167803',
+        id: 'F-74937-220405-35',
+        date: '05/04/2022 23:02',
+      },
+      {
+        severity: 'Medium',
+        text: 'Engine 173234',
+        id: 'F-74937-220405-38',
+        date: '05/04/2022 23:58',
+      },
+    ],
     driver: {
       name: 'JAMES HERD',
       id: 1015391,
