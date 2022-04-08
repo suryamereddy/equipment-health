@@ -21,7 +21,7 @@ export class MapComponent implements OnInit {
   equipmentData!: Equipment;
 
   constructor() {
-    TrimbleMaps.APIKey = 'B6ED1A19F456AE45BD0A76E3813CC249';
+    TrimbleMaps.APIKey = 'BB6EAE11E4EDC143A163E1DEA5BD03F4';
   }
 
   ngOnInit(): void {

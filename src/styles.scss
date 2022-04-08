@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
-@import 'custom-theme.scss';
-@import 'werner-colors.scss';
-@import 'werner-material-overrides.scss';
+@import 'src/styles/custom-theme.scss';
+@import 'src/styles/custom-colors.scss';
+@import 'src/styles/material-overrides.scss';
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -39,7 +39,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
-  background: $werner-theme-gray4;
+  background: $gray4;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -55,7 +55,7 @@ input[type=number] {
 }
 
 a {
-  color: $werner-theme-primary;
+  color: $primary;
 }
 
 button {
