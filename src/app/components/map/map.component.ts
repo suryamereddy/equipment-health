@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import TrimbleMaps from '@trimblemaps/trimblemaps-js';
 import { Equipment } from 'src/app/models/equipment.model';
 
@@ -11,6 +11,10 @@ export class MapComponent implements OnInit {
   @Input() set equipment(equipment: Equipment) {
     this.equipmentData = equipment;
     this.addTruckIcon(equipment);
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.addTruckIcon();
   }
 
   myMap!: TrimbleMaps.Map;
@@ -35,7 +39,7 @@ export class MapComponent implements OnInit {
     });
   }
 
-  private addTruckIcon(equipment: Equipment): void {
+  private addTruckIcon(equipment: Equipment = this.equipmentData): void {
     if (this.myMap) {
       if (this.myMap.getLayer('truckLayer'))
         this.myMap.removeLayer('truckLayer');
