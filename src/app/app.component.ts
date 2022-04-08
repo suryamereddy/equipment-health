@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Equipments } from './data/equipments';
 import { Equipment } from './models/equipment.model';
-import { DateUtility } from './utilities/date.utility';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +13,6 @@ export class AppComponent implements OnInit {
   equipmentId = '72733';
   equipments: Equipment[] = Equipments;
   equipment!: Equipment;
-
-  constructor(public dateUtility: DateUtility) {}
 
   ngOnInit(): void {
     this.getEquipmentData();

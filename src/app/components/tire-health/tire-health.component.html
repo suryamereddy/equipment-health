@@ -6,97 +6,100 @@
     <mat-expansion-panel-header>
       <mat-panel-title> Tire Health </mat-panel-title>
     </mat-expansion-panel-header>
-    <div fxLayout="column" fxLayoutGap="12px">
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Right Steer</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.rightSteer, true)"
-          >{{ equipment.tirehealth.rightSteer }} PSI
-        </span>
+    <div fxLayout="row" fxLayoutGap="12px">
+      <div fxLayout="column" fxLayoutGap="12px" fxFlex="60">
+        <div fxLayout="row" >
+          <span fxFlex class="info-title mat-body-1">Right Steer</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.rightSteer, true)"
+            >{{ equipment.tirehealth.rightSteer }} PSI
+          </span>
+        </div>
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Left Steer</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.leftSteer, true)"
+            >{{ equipment.tirehealth.leftSteer }} PSI</span
+          >
+        </div>
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Right Front Outer</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.rightFrontOuter)"
+            >{{ equipment.tirehealth.rightFrontOuter }} PSI</span
+          >
+        </div>
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Right Front Inner</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.rightFrontInner)"
+            >{{ equipment.tirehealth.rightFrontInner }} PSI</span
+          >
+        </div>
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Right Rear Outer</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.rightRearOuter)"
+            >{{ equipment.tirehealth.rightRearOuter }} PSI</span
+          >
+        </div>
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Right Rear Inner</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.rightRearInner)"
+            >{{ equipment.tirehealth.rightRearInner }} PSI</span
+          >
+        </div>
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Left Front Outer</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.leftFrontOuter)"
+            >{{ equipment.tirehealth.leftFrontOuter }} PSI</span
+          >
+        </div>
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Left Front Inner</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.leftFrontInner)"
+            >{{ equipment.tirehealth.leftFrontInner }} PSI</span
+          >
+        </div>
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Left Rear Outer</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.leftRearOuter)"
+            >{{ equipment.tirehealth.leftRearOuter }} PSI</span
+          >
+        </div>
+        <div fxLayout="row">
+          <span fxFlex class="info-title mat-body-1">Left Rear Inner</span>
+          <span
+            fxFlex
+            class="mat-body-2"
+            [ngClass]="getCssClass(equipment.tirehealth.leftRearInner)"
+            >{{ equipment.tirehealth.leftRearInner }} PSI</span
+          >
+        </div>
       </div>
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Left Steer</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.leftSteer, true)"
-          >{{ equipment.tirehealth.leftSteer }} PSI</span
-        >
-      </div>
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Right Front Outer</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.rightFrontOuter)"
-          >{{ equipment.tirehealth.rightFrontOuter }} PSI</span
-        >
-      </div>
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Right Front Inner</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.rightFrontInner)"
-          >{{ equipment.tirehealth.rightFrontInner }} PSI</span
-        >
-      </div>
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Right Rear Outer</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.rightRearOuter)"
-          >{{ equipment.tirehealth.rightRearOuter }} PSI</span
-        >
-      </div>
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Right Rear Inner</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.rightRearInner)"
-          >{{ equipment.tirehealth.rightRearInner }} PSI</span
-        >
-      </div>
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Left Front Outer</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.leftFrontOuter)"
-          >{{ equipment.tirehealth.leftFrontOuter }} PSI</span
-        >
-      </div>
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Left Front Inner</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.leftFrontInner)"
-          >{{ equipment.tirehealth.leftFrontInner }} PSI</span
-        >
-      </div>
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Left Rear Outer</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.leftRearOuter)"
-          >{{ equipment.tirehealth.leftRearOuter }} PSI</span
-        >
-      </div>
-      <div fxLayout="row">
-        <span fxFlex class="info-title mat-body-1">Left Rear Inner</span>
-        <span
-          fxFlex
-          class="mat-body-2"
-          [ngClass]="getCssClass(equipment.tirehealth.leftRearInner)"
-          >{{ equipment.tirehealth.leftRearInner }} PSI</span
-        >
-      </div>
+      <img class="truck-img" src="assets/truck.png" />
     </div>
   </mat-expansion-panel>
 </mat-accordion>
