@@ -44,11 +44,14 @@ import { AvatarModule } from 'ngx-avatar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DriverInformationComponent } from './components/driver-information/driver-information.component';
+import { EquipmentHealth } from './components/equipment-health/equipment-health.component';
 import { EquipmentHistoryComponent } from './components/equipment-history/equipment-history.component';
 import { EquipmentInformationComponent } from './components/equipment-information/equipment-information.component';
+import { HeaderComponent } from './components/header/header.component';
 import { MapComponent } from './components/map/map.component';
 import { TireHealthComponent } from './components/tire-health/tire-health.component';
 import { PhonePipe } from './pipes/phone.pipe';
+import { EquipmentHealthQueueComponent } from './components/equipment-health-queue/equipment-health-queue.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import { PhonePipe } from './pipes/phone.pipe';
     DriverInformationComponent,
     MapComponent,
     TireHealthComponent,
+    HeaderComponent,
+    EquipmentHealth,
     PhonePipe,
+    EquipmentHealthQueueComponent,
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,94 @@
+@import '../../../styles.scss';
+
+.advanced-search-table-container {
+  position: relative;
+  background: $werner-theme-white;
+  .mat-h3 {
+    padding: 0 12px;
+    line-height: 2.5 !important;
+  }
+}
+
+.advanced-search-table-container-full {
+  height: 85vh;
+  min-height: 85vh;
+}
+.advanced-search-table-container-with-selection {
+  height: 80vh;
+  min-height: 80vh;
+}
+
+.advanced-search-table {
+  min-height: 75vh;
+  .fas {
+    margin-right: 5px;
+  }
+}
+
+.events-assign {
+  position: fixed;
+  // height: 4vh;
+  width: 73%;
+  background: #e8e8e8;
+  padding: 10px 0px 10px 10px;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.14), 0px -1px 3px rgba(0, 0, 0, 0.12),
+    0px -1px 1px rgba(0, 0, 0, 0.14);
+}
+
+.mat-row:hover {
+  background-color: $werner-theme-gray3;
+}
+
+.rowSelcted {
+  background-color: $werner-theme-gray3;
+}
+
+.mat-paginator-sticky {
+  bottom: 0px;
+  position: sticky;
+  z-index: 10;
+}
+
+.locked {
+  background-color: whitesmoke;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+  background-color: rgba(245, 245, 245, 0.74);
+}
+.mat-column-Assigned {
+  flex: 0 0 18%;
+}
+
+.mat-header-cell {
+  font-size: 15px;
+  font-weight: 500;
+  color: $werner-theme-gray1
+}
+
+.mat-column-select {
+  flex: 0 0 5%;
+}
+
+.mat-column-status {
+  flex: 0 0 10%;
+}
+
+.red-icon {
+  color: $werner-theme-warn;
+}
+.red-icon svg {
+  fill: $werner-theme-warn;
+}
+
+.green-icon {
+  color: $werner-theme-success;
+}
+.green-icon svg {
+  fill: $werner-theme-success;
+}
+
+.event-assignment-content{
+  width: 100%;
+}

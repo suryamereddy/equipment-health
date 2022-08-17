@@ -1,0 +1,77 @@
+<app-header></app-header>
+<mat-form-field appearance="fill" fxLayoutAlign="end center">
+  <mat-label>Unit Number</mat-label>
+  <input matInput type="number" placeholder="Enter a Equipment Id" 
+  (keydown.enter)="filterQueue()"
+  [(ngModel)]="unitNumber"
+  placeholder="Enter a Equipment Id" />
+  <button fxLayoutAlign="left" matSuffix mat-icon-button aria-label="Clear" 
+  (click)="filterQueue()">
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>
+<div class="advanced-search-table-container mat-elevation-z2">
+  <mat-table [dataSource]="displayedData" class="advanced-search-table">
+    <div *ngIf="!data">No Events To Display</div>
+    <ng-container matColumnDef="unitNumber">
+      <mat-header-cell *matHeaderCellDef>Unit Number</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.unitNumber }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="problemSummary">
+      <mat-header-cell *matHeaderCellDef>Problem Summary</mat-header-cell>
+      <mat-cell *matCellDef="let row"
+        ><div class="mat-ripple-wrapper" matRipple>
+          {{ row.problemSummary }}
+        </div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="breakdownNumber">
+      <mat-header-cell *matHeaderCellDef>Breakdown Number</mat-header-cell>
+      <mat-cell *matCellDef="let row"
+        ><div class="mat-ripple-wrapper" matRipple>
+          {{ row.breakdownNumber }}
+        </div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="roCreatedDate">
+      <mat-header-cell *matHeaderCellDef>RO Create Date</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.roCreatedDate }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="vendorName">
+      <mat-header-cell *matHeaderCellDef>Vendor Name</mat-header-cell>
+      <mat-cell *matCellDef="let row"
+        ><div class="mat-ripple-wrapper" matRipple>
+          {{ row.vendorName }}
+        </div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+      <mat-cell *matCellDef="let row"
+        ><div class="mat-ripple-wrapper" matRipple>
+          {{ row.status }}
+        </div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="statusUpdateDate">
+      <mat-header-cell *matHeaderCellDef>Status Update Date</mat-header-cell>
+      <mat-cell *matCellDef="let row"
+        ><div class="mat-ripple-wrapper" matRipple>
+          {{ row.statusUpdateDate }}
+        </div>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row
+      *matHeaderRowDef="displayedColumns; sticky: true"
+    ></mat-header-row>
+    <mat-row
+      *matRowDef="let row; columns: displayedColumns"
+      matRipple
+    ></mat-row>
+  </mat-table>
+  <mat-paginator
+    [length]="20"
+    [pageSizeOptions]="[20, 50, 100]"
+    class="mat-paginator-sticky"
+  ></mat-paginator>
+</div>
