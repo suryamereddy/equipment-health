@@ -35,5 +35,9 @@ export class EquipmentHealthQueueComponent implements OnInit {
     } else {
       this.displayedData = this.data;
     }
+
+    this.displayedData.sort(
+      (a, b) => Date.parse(b.statusUpdateDate) - Date.parse(a.statusUpdateDate)
+    );
   }
 }
